@@ -8,7 +8,7 @@
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
       #map {
-        height: 75%;
+        height: 90%;
       }
       /* Optional: Makes the sample page fill the window. */
       html, body {
@@ -20,6 +20,7 @@
   </head>
   <body>
     <div id="map"></div>
+    <div id="coords"></div>"
     <script>
       // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
@@ -42,6 +43,8 @@
             };
             console.log("LATITUDE: " + position.coords.latitude);
             console.log("LONGITUDE: " + position.coords.longitude);
+            document.getElementById("coords").innerHTML = "whatever";
+
 
 
             infoWindow.setPosition(pos);
