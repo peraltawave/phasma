@@ -1,6 +1,22 @@
 var db = require("../models");
 
 module.exports = function(app) {
+  // When user finds a pet. Goes to our site. Clicks I found a pet button. He then goes to this page
+  app.get("/iFoundaPet", function(req, res) {
+    db.devCoordinatesTable.findAll({}).then(function(dbAll) {
+      res.render("iFoundaPet", {
+        msg: "I found a pet!",
+        examples: dbExamples
+      });
+    });
+  });
+
+
+
+/////////////^^^^ below this is an example from dave
+
+
+module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
@@ -11,9 +27,49 @@ module.exports = function(app) {
     });
   });
 
+/////////////^^^^ above this is an example from dave
+
+module.exports = function(app) {
+  // Load i Found a pet page
+  app.get("/iFoundaPet", function(req, res) {
+    db.devCoordinatesTable.findAll({}).then(function(dbAll) {
+      res.render("iFoundaPet", {
+        msg: "I found a pet!",
+        examples: dbExamples
+      });
+    });
+  });
+
+    // GET route for getting all of the posts
+    app.get("/api/posts/", function(req, res) {
+      db.Post.findAll({})
+        .then(function(dbPost) {
+          res.json(dbPost);
+        });
+    });
+
+
+      // POST route for saving a new post
+  app.post("/api/posts", function(req, res) {
+    console.log(req.body);
+    db.Post.create({
+      title: req.body.title,
+      body: req.body.body,
+      category: req.body.category
+    })
+      .then(function(dbPost) {
+        res.json(dbPost);
+      });
+  });
+
+
+
+
+
+
   // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  app.get("/iFoundaPet/:id", function(req, res) {
+    db.devCoordinates.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
       res.render("example", {
         example: dbExample
       });
