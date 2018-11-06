@@ -14,28 +14,28 @@ var db = require("../models"); // this models folder contains index.js animal.js
   module.exports = function(app) {
     // Get all pet posts
     app.get("/", function(req, res) {
-      db.devCoordinates.findAll({}).then(function(dbPets) {
+      db.petFinder_db.findAll({}).then(function(dbPets) {
         res.json(dbPets);
       });
     });
 
     // Create a new pet post
     app.post("/iFoundaPet", function(req, res) {
-      db.devCoordinates.create(req.body).then(function(dbPost) {
+      db.petFinder_db.create(req.body).then(function(dbPost) {
         res.json(dbPost);
       });
     });
   
     // Delete an example by id
     app.delete("/iFoundaPet/:id", function(req, res) {
-      db.devCoordinates.destroy({ where: { id: req.params.id } }).then(function(dbPost) {
+      db.petFinder_db.destroy({ where: { id: req.params.id } }).then(function(dbPost) {
         res.json(dbPost);
       });
     });
     
     // PUT route for updating posts
     app.put("/iFoundaPet", function(req, res) {
-      db.Post.update(
+      db.petFinder_db.update(
         req.body,
         {
           where: {

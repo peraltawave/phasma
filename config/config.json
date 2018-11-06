@@ -1,15 +1,16 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
-    "host": "localhost",
-    "dialect": "mysql"
+    "password": "toor",
+    "database": "petFinder_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
   },
   "test": {
     "username": "miguel",
     "password": "freedomFries",
-    "database": "testes",
+    "database": "petFinder_db",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false

@@ -1,3 +1,7 @@
+// CONFIRMED BY MIGUEL THAT this file can be used with our stuff
+// this file basically spits out the module export 'db'
+// 5 NOV 2018
+
 "use strict";
 
 var fs = require("fs");
