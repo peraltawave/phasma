@@ -57,10 +57,10 @@ module.exports = function(app) {
   });
   //Route for page to search pets
   app.get("/petSearch", function(req, res) {
-    db.petfinder_data.findAll({}).then(function(result) {
-      console.log(result);
+    db.petfinder_data.findAll({}).then(function(response) {
+      console.log(response);
       return res.render("petSearch", {
-        allPosts: result
+        allPosts: response
       });
     });
   });

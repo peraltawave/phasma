@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     animalGenderMale: {
-      type: DataTypes.BOOLEAN,
+      type: DataTypes.STRING(255),
       allowNull: false
     },
 

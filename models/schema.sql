@@ -10,7 +10,7 @@ CREATE TABLE petfinder_data (
   latitude FLOAT(10,6) NOT NULL,
   longitude FLOAT(10,6) NOT NULL,
   animalSpecies VARCHAR(255),
-  animalGenderMale BOOLEAN DEFAULT true,
+  animalGenderMale VARCHAR(255),
   animalPic VARCHAR(255),
   animalFeatures VARCHAR(255),
   foundStreet1 VARCHAR(255),
