@@ -12,7 +12,8 @@ pet_type varchar(255) not null,
 pet_description text not null,
 
 primary key (pet_id);
-
+ 
+ 
 
 
 );
