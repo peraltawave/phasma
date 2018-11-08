@@ -1,7 +1,11 @@
-module.exports = function(sequelize, DataTypes) {
-  var Example = sequelize.define("Example", {
-    text: DataTypes.STRING,
-    description: DataTypes.TEXT
+module.exports = function (sequelize, DataTypes) {
+  var Picture = sequelize.define("Picture", {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    url: DataTypes.TEXT
   });
-  return Example;
+  return Picture;
 };
