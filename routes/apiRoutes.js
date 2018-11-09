@@ -46,4 +46,17 @@ module.exports = function(app) {
         res.redirect("/post/" + data.dataValues.id);
       });
   });
+  app.delete("/post/:id", function(req, res) {
+    console.log("DELETING FORM " + req.params.id);
+    db.petfinder_data
+      .destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(function(data) {
+        return res.json(data);
+        // res.redirect("/");
+      });
+  });
 };

@@ -38,6 +38,11 @@ module.exports = function(app) {
     res.render("iFoundAPet-form");
   });
 
+  // route for "post deleted" page
+  app.get("/postDeleted", function(req, res) {
+    res.render("postDeleted");
+  });
+
   //Route for viewing a single post
   app.get("/post/:id", function(req, res) {
     var id = req.params.id;
