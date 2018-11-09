@@ -1,83 +1,53 @@
 var db = require("../models");
 
-module.exports = function(app) {
-  // When user finds a pet. Goes to our site. Clicks I found a pet button. He then goes to this page
-  app.get("/iFoundaPet", function(req, res) {
-    db.devCoordinatesTable.findAll({}).then(function(dbAll) {
-      res.render("iFoundaPet", {
-        msg: "I found a pet!",
-        examples: dbExamples
-      });
-    });
-  });
-
-
-
-/////////////^^^^ below this is an example from dave
-
+// REAL CODE
 
 module.exports = function(app) {
-  // Load index page
+  // Each of the below routes just handles the HTML page that the user gets sent to.
+  //Route for Home Page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+    res.render("index");
   });
 
-/////////////^^^^ above this is an example from dave
-
-module.exports = function(app) {
-  // Load i Found a pet page
-  app.get("/iFoundaPet", function(req, res) {
-    db.devCoordinatesTable.findAll({}).then(function(dbAll) {
-      res.render("iFoundaPet", {
-        msg: "I found a pet!",
-        examples: dbExamples
-      });
-    });
+  // index route loads iFoundaPet.html
+  app.get("/iFoundAPet", function(req, res) {
+    res.render("iFoundAPet-form");
   });
 
-    // GET route for getting all of the posts
-    app.get("/api/posts/", function(req, res) {
-      db.Post.findAll({})
-        .then(function(dbPost) {
-          res.json(dbPost);
+  // route for "post deleted" page
+  app.get("/postDeleted", function(req, res) {
+    res.render("postDeleted");
+  });
+
+  //Route for viewing a single post
+  app.get("/post/:id", function(req, res) {
+    var id = req.params.id;
+
+    db.petfinder_data
+      .findOne({
+        where: {
+          id: id
+        }
+      })
+      .then(function(post) {
+        console.log("post", post);
+        res.render("post", {
+          post: post
         });
-    });
-
-
-      // POST route for saving a new post
-  app.post("/api/posts", function(req, res) {
-    console.log(req.body);
-    db.Post.create({
-      title: req.body.title,
-      body: req.body.body,
-      category: req.body.category
-    })
-      .then(function(dbPost) {
-        res.json(dbPost);
       });
   });
-
-
-
-
-
-
-  // Load example page and pass in an example by id
-  app.get("/iFoundaPet/:id", function(req, res) {
-    db.devCoordinates.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+  //Route for page to search pets
+  app.get("/petSearch", function(req, res) {
+    db.petfinder_data.findAll({}).then(function(response) {
+      console.log(response);
+      return res.render("petSearch", {
+        allPosts: response
       });
     });
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+  // blog route loads about.html
+  app.get("/about", function(req, res) {
+    res.render("about");
   });
 };
