@@ -21,7 +21,6 @@ module.exports = function (app) {
 
   ///////// below is the picture upload code
 
-  app.use(express.static("../public"))
 
   ///////// Load example page and pass in an example by id
   app.get("/picture/:id", function (req, res) {
