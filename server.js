@@ -3,6 +3,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var exphbs = require("express-handlebars");
 
+console.log("Starting server...");
+
 var db = require("./models");
 
 var app = express();
