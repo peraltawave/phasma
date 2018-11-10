@@ -1,26 +1,15 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
-    "password": "1234",
-    "database": "exampledb",
-=======
     "password": "toor",
     "database": "petFinder_db",
->>>>>>> 697a2a3041e5561fc65b709bd089b14fc1d9dff2
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
-<<<<<<< HEAD
-    "username": "root",
-    "password": "1234",
-    "database": "testdb",
-=======
     "username": "miguel",
     "password": "toor",
     "database": "petFinder_db",
->>>>>>> 697a2a3041e5561fc65b709bd089b14fc1d9dff2
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
