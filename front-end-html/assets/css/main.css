@@ -1693,7 +1693,7 @@
 		}
 
 	h2 {
-		font-size: 1.75rem;
+		font-size: 2.75rem;
 	}
 
 	h3 {
@@ -1827,8 +1827,8 @@
 
 		.box header p {
 			text-transform: uppercase;
-			font-size: .75rem;
-			font-weight: 300;
+			font-size: 1.25rem;
+			font-weight: 500;
 			margin: 0 0 .25rem 0;
 			padding: 0 0 .75rem 0;
 			letter-spacing: .25rem;
@@ -2890,7 +2890,9 @@
 
 		.wrapper.style2 {
 			background-color: #f2f2f2;
-			color: #a6a6a6;
+			/* color: #a6a6a6; */
+			color: #333333;
+
 		}
 
 			.wrapper.style2 input, .wrapper.style2 select, .wrapper.style2 textarea {
@@ -2931,8 +2933,9 @@
 			.wrapper.style2 input[type="button"],
 			.wrapper.style2 button,
 			.wrapper.style2 .button {
-				background-color: #000;
-				color: #f2f2f2 !important;
+				background-color: #cccccc;
+				color: #fff !important;
+				font-weight: 400;
 			}
 
 				.wrapper.style2 input[type="submit"].alt,
@@ -3069,7 +3072,7 @@
 			}
 
 			.wrapper.style2 header p {
-				color: #999999;
+				color: #666666;
 			}
 
 			.wrapper.style2 table tbody tr {
@@ -3097,9 +3100,10 @@
 			}
 
 		.wrapper.style3 {
-			background-color: #000;
+			background-color: #666;
 			color: #bfbfbf;
-			background-image: url(../../images/bg.jpg);
+			/* MIGEDIT */
+			background-image: url(../../images/bslide05.jpg); 
 			background-size: cover;
 			background-attachment: fixed;
 			background-position: center;
@@ -3112,8 +3116,8 @@
 
 			.wrapper.style3 a {
 				color: limegreen;
-				animation: blink-animation 1s steps(5, start) infinite;
-  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+				/* animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite; */
 }
 @keyframes blink-animation {
   to {
@@ -3312,7 +3316,7 @@
 			}
 
 			.wrapper.style3 header p {
-				color: #999999;
+				color: #ffffff;
 			}
 
 			.wrapper.style3 table tbody tr {
@@ -3346,7 +3350,7 @@
 
 			.wrapper.style3 p {
 				text-transform: uppercase;
-				font-size: .75rem;
+				font-size: 1.25rem;
 				font-weight: 300;
 				margin: 0 0 .5rem 0;
 				padding: 0 0 1rem 0;
@@ -4186,7 +4190,7 @@
 			.banner > article p {
 				color: rgba(255, 255, 255, 0.65);
 				text-transform: uppercase;
-				font-size: 1rem;
+				font-size: 2rem;
 				font-weight: 300;
 				margin: 0;
 				padding-bottom: 1.75rem;
@@ -4324,3 +4328,8 @@
 			}
 
 		}
+
+		/*MIGEDIT
+		.file { position: relative; height: 30px; width: 100px; }
+.file > input[type="file"] { position: absoulte; opacity: 0; top: 0; left: 0; right: 0; bottom: 0 }
+.file > label { position: absolute; top: 0; right: 0; left: 0; bottom: 0; background-color: #666; color: #fff; line-height: 30px; text-align: center; cursor: pointer; } */
