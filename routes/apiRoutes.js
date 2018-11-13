@@ -12,21 +12,6 @@
 // ***********************************************
 // REAL CODE BY JOSH
 
-<<<<<<< HEAD
-module.exports = function(app) {
-  // Get all examples
-  app.get("/api/getall", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-// we think alex changed this
-  // Create a new example
-  app.post("/api/Petfinder", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
-=======
 var db = require("../models");
 module.exports = function (app) {
   app.post("/iFoundAPet", function (req, res) {
@@ -62,7 +47,6 @@ module.exports = function (app) {
         return res.json(data);
         // res.redirect("/");
       });
->>>>>>> 697a2a3041e5561fc65b709bd089b14fc1d9dff2
   });
 
 
