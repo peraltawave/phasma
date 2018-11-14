@@ -9,7 +9,25 @@
   <title>PetFinder by grupoCUATRO .. MIG</title>
 </head>
 
-<body>
+<script type="text/javascript" src="http://streamed.in/static/js/jquery-1.4.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        var s = $('#obj1').html();
+        s = s.replace(/<li>/g,'#');
+        s = s.replace(/<\/li>/g,'<br/>');
+        $('#obj1').html(s);
+    });
+    </script>
+<body class="obj1">
+  <li>omg 1</li>
+    <li>omg 2</li>
+    <li>omg 3</li>
+    <li>omg 4</li>
+
+
+
+
+
   {{!-- Header --}}
   <header id="header" class="alt">
     <div class="logo"><a href="/">PetFinder Heroku<span> by GRUPOCUATRO</span></a></div>
