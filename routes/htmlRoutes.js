@@ -35,11 +35,6 @@ module.exports = function (app) {
     });
   });
 
-  ///////// Render 404 page for any unmatched routes
-  app.get("*", function (req, res) {
-    res.render("404");
-  });
-
 
   ///////// end of picture function
 
@@ -76,8 +71,31 @@ module.exports = function (app) {
     });
   });
 
-  ///////// blog route loads about.html
-  app.get("/about", function (req, res) {
-    res.render("about");
+
+
+
+
+  /////// blog route loads about.html
+//   app.get("/about", function (req, res) {
+//    res.render("about");
+//  });
+
+
+  ///////// Render 404 page for any unmatched routes
+  app.get("*", function (req, res) {
+    res.render("404");
   });
+
+
+  //assuming app is express Object.
+app.get('/about',function(req,res){
+       
+  res.sendFile('about.html');
+
+});
+
+
+
+
+
 };
