@@ -1,23 +1,31 @@
+{{!--
+<link rel="stylesheet" href="css/main.css" /> --}}
+
 <h1>I Found A Pet Form</h1>
+<div class="box alt">
+    <div class="row 50% uniform">
+        <form method="POST" action="/iFoundAPet">
 
-<form method="POST" action="/iFoundAPet">
+            <div class="4u"><input type="text" name="animalSpecies" id="query" value="" placeholder="Species" /></div>
 
-    <input type="text" name="animalSpecies"/>
+            <div class="4u$"><input type="radio" name="animalGenderMale" value="male" id="priority-low">Male</div>
 
-    <input type="radio" name="animalGenderMale" value="male">Male<br />
-    <input type="radio" name="animalGenderMale" value="female">Female<br />
+            <div class="4u"><input type="radio" name="animalGenderMale" value="female" id="priority-normal">Female</div>
 
-    <input type="text" name="animalPic"/>
+            <div class="4u$"><input type="text" name="animalPic" id="query" value="" placeholder="Pic" /></div>
 
-    <input type="text" name="animalFeatures"/>
+            <div class="4u"><input type="text" name="animalFeatures" id="query" value="" placeholder="Distinguishing Features" /></div>
 
-    <input type="text" name="foundStreet1"/>
+            <div class="4u$"><input type="text" name="foundStreet1" id="query" value="" placeholder="Cross Street One" /></div>
 
-    <input type="text" name="foundStreet2"/>
+            <div class="4u"><input type="text" name="foundStreet2" id="query" value="" placeholder="Cross Street Two" /></div>
 
-    <input type="text" name="personName"/>
+            <div class="4u$"><input type="text" name="personName" id="query" value="" placeholder="Human Name" /></div>
 
-    <input type="text" name="personEmail"/>
+            <div class="4u"><input type="text" name="personEmail" id="query" value="" placeholder="Human Email" /></div>
 
-    <button type="submit">Submit Post</button>
-</form>
+            <div class="4u$"><input type="submit" value="Submit Post" class="fit" /></div>
+            {{!-- <button type="submit">Submit Post</button> --}}
+        </form>
+    </div>
+</div>
