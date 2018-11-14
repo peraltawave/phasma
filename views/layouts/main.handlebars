@@ -1,20 +1,11 @@
-{{!-- // https://www.peraltawave.com/front-end-html/images/bg.jpg
-// url(../../images/bg.jpg) --}}
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  {{!--
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8"> --}}
   <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
-  {{!-- <link rel="stylesheet" href="../../front-end-html/assets/css/main.css" media="screen" title="no title" charset="utf-8"> --}}
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
   <title>PetFinder by grupoCUATRO .. MIG</title>
 </head>
 
@@ -26,67 +17,43 @@
   </header>
 
 
-{{!-- Nav	 --}}
-<nav id="menu">
-		<ul class="links">
-			<li><a href="/">home</a></li>
-			<li><a href="/iFoundAPet">i found a pet</a></li>
-			<li><a href="/post">see the pet</a></li>
-			<li><a href="/petSearch">search all pets</a></li>
-			<li><a href="/about">about</a></li>
-		</ul>
-	</nav>
+  {{!-- Nav --}}
+  <nav id="menu">
+    <ul class="links">
+      <li><a href="/">home</a></li>
+      <li><a href="/iFoundAPet">i found a pet</a></li>
+      <li><a href="/post">see the pet</a></li>
+      <li><a href="/petSearch">search all pets</a></li>
+      <li><a href="/about">about</a></li>
+    </ul>
+  </nav>
 
   {{{body}}}
 
-{{!-- Footer	 --}}
-	<footer id="footer">
-		<div class="container">
-			<ul class="icons">
-				<li><a href="https://twitter.com/peraltawave" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="https://www.facebook.com/peraltawavepixels" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="https://www.instagram.com/peraltawavepixels/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="http://www.mperalta.com/" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-			</ul>
-		</div>
-		<div class="copyright">
-            &copy; <script>document.write(new Date().getFullYear());</script> Grupo Cuatro<br>All rights reserved.
-		</div>
-	</footer> 
-
-{{!-- Scripts --}}
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.scrollex.min.js"></script>
-	<script src="js/skel.min.js"></script>
-	<script src="js/util.js"></script>
-	<script src="js/main.js"></script>
-
-
-
-
-  <!-- Footer -->
+  {{!-- Footer --}}
   <footer id="footer">
     <div class="container">
       <ul class="icons">
-        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+        <li><a href="https://twitter.com/peraltawave" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+        <li><a href="https://www.facebook.com/peraltawavepixels" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+        <li><a href="https://www.instagram.com/peraltawavepixels/" class="icon fa-instagram" target="_blank"><span
+              class="label">Instagram</span></a></li>
+        <li><a href="http://www.mperalta.com/" class="icon fa-envelope-o" target="_blank"><span class="label">Email</span></a></li>
       </ul>
     </div>
     <div class="copyright">
-      &copy; Untitled. All rights reserved.
+      &copy;
+      <script>document.write(new Date().getFullYear());</script> Grupo Cuatro<br>All rights reserved.
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://www.peraltawave.com/front-end-html/assets/js/jquery.min.js"></script>
-  <script src="https://www.peraltawave.com/front-end-html/assets/js/jquery.scrollex.min.js"></script>
-  <script src="https://www.peraltawave.com/front-end-html/assets/js/skel.min.js"></script>
-  <script src="https://www.peraltawave.com/front-end-html/assets/js/util.js"></script>
-  <script src="https://www.peraltawave.com/front-end-html/assets/js/main.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  <script src="https://www.peraltawave.com/public/js/index.js"></script>
+  {{!-- Scripts --}}
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.scrollex.min.js"></script>
+  <script src="js/skel.min.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>
