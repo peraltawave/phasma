@@ -19,21 +19,51 @@
 </head>
 
 <body>
-  <!-- Header -->
+  {{!-- Header --}}
   <header id="header" class="alt">
-    <div class="logo"><a href="/">PetFinder <span>by GRUPOCUATRO</span></a></div>
+    <div class="logo"><a href="/">PetFinder Heroku<span>by GRUPOCUATRO</span></a></div>
     <a href="#menu">Menu</a>
   </header>
 
-  <!-- Nav -->
-  <nav id="menu">
-    <ul class="links">
-      <li><a href="/">home</a></li>
-      <li><a href="/iFoundAPet">i found a pet</a></li>
-      <li><a href="/about">about</a></li>
-    </ul>
-  </nav>
+
+{{!-- Nav	 --}}
+<nav id="menu">
+		<ul class="links">
+			<li><a href="/">home</a></li>
+			<li><a href="/iFoundAPet">i found a pet</a></li>
+			<li><a href="/post">see the pet</a></li>
+			<li><a href="/petSearch">search all pets</a></li>
+			<li><a href="/about">about</a></li>
+		</ul>
+	</nav>
+
   {{{body}}}
+
+{{!-- Footer	 --}}
+	<footer id="footer">
+		<div class="container">
+			<ul class="icons">
+				<li><a href="https://twitter.com/peraltawave" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="https://www.facebook.com/peraltawavepixels" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="https://www.instagram.com/peraltawavepixels/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="http://www.mperalta.com/" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+			</ul>
+		</div>
+		<div class="copyright">
+            &copy; <script>document.write(new Date().getFullYear());</script> Grupo Cuatro<br>All rights reserved.
+		</div>
+	</footer> 
+
+{{!-- Scripts --}}
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.scrollex.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/util.js"></script>
+	<script src="js/main.js"></script>
+
+
+
+
   <!-- Footer -->
   <footer id="footer">
     <div class="container">
